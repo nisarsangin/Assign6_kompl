@@ -8,7 +8,7 @@ function MovieForm({ addMovie, setMovies, movies }) {
   const handleSubmit = (event) => {
     event.preventDefault();
     if (!title || !rating) {
-      alert('Please fill in both the title and rating!');
+      alert('Vänligen fyll in både titel och betyg!');
       return;
     }
     addMovie(title, rating);
@@ -31,18 +31,18 @@ function MovieForm({ addMovie, setMovies, movies }) {
       <Row>
         <Col>
           <Form.Control 
-            placeholder="Movie Title" 
+            placeholder="Titel här..." 
             value={title} 
             onChange={e => setTitle(e.target.value)}
           />
         </Col>
         <Col>
           <Form.Select 
-            aria-label="Rating Select"
+            aria-label="Välj betyg här..."
             value={rating} 
             onChange={e => setRating(e.target.value)}
           >
-            <option value="">Select Rating</option>
+            <option value="">Välj betyg här...</option>
             <option value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>
@@ -52,17 +52,17 @@ function MovieForm({ addMovie, setMovies, movies }) {
         </Col>
         <Col xs="auto">
           <Button variant="primary" type="submit">
-            Add Movie
+            Spara film
           </Button>
         </Col>
         <Col xs="auto">
           <Button variant="secondary" onClick={sortByTitle}>
-            Sort by Title
+            Alfabetisk ordning
           </Button>
         </Col>
         <Col xs="auto">
           <Button variant="secondary" onClick={sortByRating}>
-            Sort by Rating
+            Betygsordning
           </Button>
         </Col>
       </Row>

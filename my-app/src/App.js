@@ -19,7 +19,7 @@ function App() {
 
   return (
     <div className="App container">
-      <h1 className="text-center my-4">My Movies</h1>
+      <h1 className="text-center my-4">Min Filmlista</h1>
       <MovieForm addMovie={addMovie} setMovies={setMovies} movies={movies} />
       <div className="row mt-4">
         {movies.map((movie, index) => (
