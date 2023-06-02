@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Form, Button, Row, Col } from 'react-bootstrap';
+import './App.css'; 
 
 function MovieForm({ addMovie, setMovies, movies }) {
   const [title, setTitle] = useState('');
@@ -51,17 +52,17 @@ function MovieForm({ addMovie, setMovies, movies }) {
           </Form.Select>
         </Col>
         <Col xs="auto">
-          <Button variant="primary" type="submit">
+          <Button variant="success" type="submit">
             Spara film
           </Button>
         </Col>
         <Col xs="auto">
-          <Button variant="secondary" onClick={sortByTitle}>
+        <Button variant="primary" onClick={sortByTitle}>
             Alfabetisk ordning
           </Button>
         </Col>
         <Col xs="auto">
-          <Button variant="secondary" onClick={sortByRating}>
+          <Button variant="primary" onClick={sortByRating}>
             Betygsordning
           </Button>
         </Col>
